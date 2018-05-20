@@ -1,0 +1,175 @@
+@green: #02853D;
+@greenDark: darken(@green, .5);
+@grayLight: #bbb;
+
+@primaryColor: @green;
+@primaryDark: @greenDark;
+
+@linkColor: @primaryColor;
+@headlineFont: "Roboto", "Arial", sans-serif;
+
+
+@import "../bootstrap/bootstrap";
+@import "datepicker";
+.datepicker { border-radius: none; }
+
+.btn-primary {
+  background-color: @green;  
+  border-color: @greenDark;
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary.active {
+  background-color: @greenDark;
+  border-color: @greenDark;
+}
+
+nav {
+  font-family: @headlineFont;  
+}
+
+.container-fluid .navbar-brand {
+  color: @green;
+}
+
+.panel-default {
+  border-color: @grayLight;
+  
+  &>.panel-heading {
+    font-family: @headlineFont;
+    background-color: @green;
+    color: #fff;
+  }
+}
+
+
+
+/**
+ *   Login
+ */
+#admin-login {
+  .logo {
+    margin: 25px 15px;
+    max-height: 150px;
+  }
+}
+
+
+
+/**
+ *   Dashboard
+ */
+#chart-legend {
+  text-align: left;
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  
+  .doughnut-legend {
+    list-style: none;
+
+    span {
+      display: inline-block;
+      width: 15px;
+      height: 15px;
+      margin-right: 7px;
+    }
+  }
+}
+
+
+/**
+ *   Social Posts
+ */
+.media-posts {
+  .admin-media {
+    img, video {
+      width: 100%;
+    }
+  }
+  
+  .commands {
+    .btn {
+      display: block;
+      margin-bottom: 10px;
+      transition: all .5s ease;
+    }
+    
+    &.approved {
+      .moderate-approve {
+        background-color: transparent;
+        border: transparent;
+        color: #000;
+        font-weight: bold;
+        
+        &::after {
+          content: "d";
+        }
+      }
+    }
+    
+    &.rejected {
+      .moderate-reject {
+        background-color: transparent;
+        border: transparent;
+        color: #000;
+        font-weight: bold;
+        
+        &::after {
+          content: "ed";
+        }
+      }
+    }
+  }
+  
+  .author-image {
+    max-width: 35px;
+  }
+  
+  .no-matches {
+    padding: 75px 0 75px;
+    text-align: center;
+    font-weight: bold;
+  }
+  
+  table {
+    font-size: 12px;
+    
+    td {
+    -ms-word-break: break-all;
+     word-break: break-all;
+     word-break: break-word;
+    }
+  }
+}
+
+.pagination-container {
+  text-align: center;
+  
+  .pagination {
+    > li > a {
+      color: @primaryColor;
+      
+      &:hover {
+        color: @primaryDark;
+      }
+    }
+    
+    > .active > span {
+      background-color: @primaryColor;
+      border-color: @primaryColor;
+    }
+    
+  }
+}
+
+
+
+.filters-form .form-group {
+  margin-right: 15px;
+}
+input.datepicker {
+  max-width: 100px;
+}

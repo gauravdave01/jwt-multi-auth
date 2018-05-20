@@ -1,0 +1,13 @@
+/nbproject/private/
+/node_modules
+/Source/node_modules
+/Source/.env
+/nbproject/
+/.idea/
+.DS_Store
+*.sublime-*
+deploy.local.sh
+.project
+.buildpath
+/.settings/
+package-lock.json
